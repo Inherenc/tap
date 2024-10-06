@@ -7,9 +7,10 @@ class Dtf < Formula
 
     sha256 "b8e308002f7449750ca1b924d88575d552b7c733e5a955ad1f07a736f6d725a5"
 
+    depends_on "rust" => :build
+
     def install
-        binary_name="dtf"
-        bin.install "#{binary_name}"
+        system "cargo", "install", *std_cargo_args
     end
 
     # test do
