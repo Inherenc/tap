@@ -10,6 +10,9 @@ class Dtf < Formula
     def install
         binary_name="dtf"
         bin.install "#{binary_name}"
-        mv bin/"#{binary_name}", bin/"dtf"
     end
+
+    # test do
+    #     system "#{bin}/dtf version"
+    # end
 end
