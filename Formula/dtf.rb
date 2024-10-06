@@ -1,16 +1,16 @@
 class Dtf < Formula
     version "0.1.0"
     desc "Dtf: Manage dot files"
-    homepage ""
-
-    url "https://github.com/pavandv/dtf-manager/releases/download/#{version}/dtf"
-
-    sha256 "b8e308002f7449750ca1b924d88575d552b7c733e5a955ad1f07a736f6d725a5"
+    homepage "https://github.com/pavandv/dtf-manager"
+    url "https://github.com/pavandv/dtf-manager/archive/refs/tags/#{version}.tar.gz"
+    head "https://github.com/pavandv/dtf-manager.git", branch: "master"
 
     depends_on "rust" => :build
 
     def install
         system "cargo", "install", *std_cargo_args
+
+        generate_completions_from_executable(bin/"dtf", "completion")
     end
 
     # test do
