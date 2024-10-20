@@ -1,5 +1,5 @@
 class Dtf < Formula
-    version "0.1.0"
+    version "1.0.0"
     desc "Dtf: Manage dot files"
     homepage "https://github.com/pavandv/dtf-manager"
     url "https://github.com/pavandv/dtf-manager/archive/refs/tags/#{version}.tar.gz"
